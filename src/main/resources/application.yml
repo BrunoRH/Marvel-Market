@@ -1,0 +1,28 @@
+spring:
+  profiles:
+    active: dev
+---
+server:
+  servlet:
+    context-path: /autodidactas-market/api
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/db_market
+    username: postgres
+    password: admin
+    driver-class-name: org.postgresql.Driver
+
+
+
+
+
+
+
+
+
+
+
+
+
+

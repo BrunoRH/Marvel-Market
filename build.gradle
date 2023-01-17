@@ -1,0 +1,31 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '2.7.7'
+	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+}
+
+group = 'com.autodidactas'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {		//Se copia el GRUPO:NAME(Dependencia)
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	//Solo en tiempo de ejecucion no la necesitamos cuando estamos escribiendo nuestro codigo
+	runtimeOnly 'org.postgresql:postgresql'
+
+	implementation 'org.mapstruct:mapstruct:1.5.3.Final'
+
+	annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.3.Final'
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
