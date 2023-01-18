@@ -4,21 +4,22 @@ import com.autodidactas.market.domain.Product;
 import com.autodidactas.market.domain.repository.ProductRepository;
 import com.autodidactas.market.persistence.entity.Producto;
 import com.autodidactas.market.persistence.mapper.ProductMapper;
-import com.autodidactas.market.persistence.repositories.ProductoRepository;
-import org.springframework.stereotype.Service;
+import com.autodidactas.market.persistence.repositories.ProductoCrudRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
-import javax.swing.text.html.Option;
 import java.util.List;
 import java.util.Optional;
 
-@Service
-public class ProductoService implements ProductRepository {
+@Repository
+public class ProductoRepository implements ProductRepository {
 
-    private ProductoRepository productoRepository;
-
+    @Autowired
+    private ProductoCrudRepository productoRepository;
+    @Autowired
     private ProductMapper productMapper;
 
-    public ProductoService(ProductoRepository productoRepository){
+    public ProductoRepository(ProductoCrudRepository productoRepository){
         this.productoRepository = productoRepository;
     }
 

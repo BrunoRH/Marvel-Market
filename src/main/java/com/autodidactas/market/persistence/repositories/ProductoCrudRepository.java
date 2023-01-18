@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Optional;
 
 
-public interface ProductoRepository extends CrudRepository <Producto, Long> {
+public interface ProductoCrudRepository extends CrudRepository <Producto, Long> {
 
 
     //Recuperar toda la lista de productos que pertenezca a una categoria en especifico

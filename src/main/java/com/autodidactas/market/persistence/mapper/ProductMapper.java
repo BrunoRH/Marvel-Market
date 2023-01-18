@@ -30,10 +30,4 @@ public interface ProductMapper {
     @Mapping(target = "codigoBarras", ignore = true)
     Producto toProducto(Product product);
 
-
-
-
-
-
-
 }
